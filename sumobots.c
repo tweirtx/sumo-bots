@@ -4,6 +4,15 @@
 
 task main()
 {
+	wait(1);
+	startMotor(leftmotor, 127);
+	startMotor(rightmotor, 127);
+	wait(1);
+	startMotor(leftmotor, -127);
+	startMotor(rightmotor, -127);
+	wait(1);
+	stopMotor(leftmotor);
+	stopMotor(rightmotor);
 	while (true) {
 		motor[leftmotor] = vexRT[Ch3];
 		motor[rightmotor] = vexRT[Ch2];
