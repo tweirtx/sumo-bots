@@ -4,6 +4,15 @@
 
 task main()
 {
+	wait(1);
+	startMotor(leftmotor, 127);
+	startMotor(rightmotor, 127);
+	wait(1);
+	startMotor(leftmotor, -127);
+	startMotor(rightmotor, -127);
+	wait(1);
+	stopMotor(leftmotor);
+	stopMotor(rightmotor);
 	while (true) {
 		if(vexRT[Ch3]*vexRT[Ch2] <= 0){ //Opposite directions or only one on
 			motor[leftmotor] = -vexRT[Ch3]*0.6;
